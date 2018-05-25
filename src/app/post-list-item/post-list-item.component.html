@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h4>{{ post.title }}</h4> 
+  </div>
+  <div class="col-sm-6 text-right">
+    <h4>{{ post.created_at | date: 'short' | uppercase }}</h4>
+  </div>
+</div>
+
+<p>
+  {{ post.content }}    
+</p>
+
+<button class="btn btn-success btn-sm" (click)="loveIt(+1)">Love It !</button> <button class="btn btn-danger btn-sm" (click)="loveIt(-1)">Don't Love It !</button>
